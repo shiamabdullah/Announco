@@ -23,4 +23,20 @@
           }
   }
 
+  function insertUser($user)
+  {print_r($user);
+    $conn=getConnection();
+    $sql="INSERT INTO `admin` (`name`, `username`, `password`) VALUES 
+    ('{$user['name']}','{$user['username']}','{$user['password']}')";
+    $result=mysqli_query($conn,$sql);
+    if($result)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+  }
+
   ?>
