@@ -21,7 +21,7 @@ require_once('header.php');
         <div class="mb-3">
             <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
         </div>
-        <div class="mb-3"><button class="btn btn-dark d-block w-100" type="submit" name="submit">Sign Up</button></div><a class="already" href="#">You already have an account? Login here.</a>
+        <div class="mb-3"><button class="btn btn-dark d-block w-100" type="submit" name="submit">Sign Up</button></div><a class="already" href="/view/login.php">You already have an account? Login here.</a>
     </form>
 </div>
 </section>

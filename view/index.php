@@ -61,8 +61,10 @@ $user=$_SESSION['current_user'];
                 echo$row['body'];
                 echo'</p>';
 
-                echo '<div class="btn-group" role="group"><button class="btn btn-primary" type="button">Update
-                    </button><button class="btn btn-danger" type="button">Delete</button></div>';
+               
+
+                echo "<a class=\"btn btn-primary\" href=\"update.php?id={$row['id']}\" role=\"button\">Update</a> ";
+                echo "<a class=\"btn btn-danger\" href=\"../controller/deleteCustomerAdmin.php?id={$row['id']}\" role=\"button\">Delete</a>";
                 echo '</div>';
                 echo '</div>';
         
