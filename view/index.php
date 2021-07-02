@@ -2,6 +2,12 @@
 $title = "X Titan E-COMM";
 
 require_once('header.php');
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+//print_r($_SESSION['current_user']);
+$user=$_SESSION['current_user'];
 
 ?>
 
@@ -12,14 +18,17 @@ require_once('header.php');
             <?php 
             if(!isset($_SESSION['flag'])){
               
-            echo '<ul class="navbar-nav me-auto"></ul><span class="navbar-text actions"> <a class="login" href="login.php">Log In</a><a class="btn btn-light action-button" role="button" href="#">Sign Up</a></span>';
+            echo '<ul class="navbar-nav me-auto"></ul><span class="navbar-text actions"> <a class="login" href="login.php">Log In</a><a class="btn btn-light action-button" role="button" href="signup.php">Sign Up</a></span>';
             echo '';
             }
             
 
             else 
             {
-                echo "other output";
+                echo '<ul class="navbar-nav me-auto"></ul><span class="navbar-text actions"> <a class="login">' ;
+                echo $user['name'];
+                echo' 🟢</a><a class="btn btn-light action-button" role="button" href="../controller/signout.php">Sign Out</a></span>';
+
             }
             ?>
                 

@@ -1,4 +1,6 @@
 <?php 
+require_once('../model/admin.php');
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -13,6 +15,9 @@ if (session_status() == PHP_SESSION_NONE) {
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
 <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
 <link rel="stylesheet" href="assets/css/styles.css">
 
 	<title><?=$title?></title>
