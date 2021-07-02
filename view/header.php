@@ -1,5 +1,6 @@
 <?php 
 require_once('../model/admin.php');
+require_once('../model/db.php');
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
