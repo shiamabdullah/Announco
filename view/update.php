@@ -3,7 +3,6 @@ $title = "Update Post";
 require_once('header.php');
 require_once('../model/announce.php');
 $post = getPostbyId($_GET['id']);
-// print_r($post);
 ?>
  </nav>
  <div class="container" style="text-align: center;">

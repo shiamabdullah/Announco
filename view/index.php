@@ -25,8 +25,34 @@ $user=$_SESSION['current_user'];
             echo '</div>';
             echo '</nav>';  
 
+            $conn = getConnection();
+            $sql = "select * from announcement";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result))
+            {
+            echo '<div class="container" style="text-align: center;">';    
+            echo '<div class="card" > ';
+            echo '<div class="card-body">';
+            echo '<h4 class="card-title">';
+            echo$row['header'];
+            echo'</h4>';
+
+            echo '<h6 class="text-muted card-subtitle mb-2">Posted on: ';
+            $date=date('d/m/Y', strtotime($row['posttime']));
+
+            echo $date;
+            echo '</h6><p class="card-text">';
+            echo$row['body'];
+            echo'</p>';
+
            
-            }           
+
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+
+           
+            }       }    
 
             
 
@@ -43,7 +69,8 @@ $user=$_SESSION['current_user'];
                 echo '</nav>';  
 
                 echo '<div>';
-                echo '<div class="container" style="text-align: center;"> <h4><a href="add.php">Add Post</a></h4></div>';
+                echo '<div class="container" style="text-align: center"> <h3 style="color: var(--bs-dark);">X TITAN E-COMM ANNOUNCEMENT BOARD</h3></div>';
+                echo '<div class="container" style="text-align: left;"> <h4><a href="add.php">Add Post</a></h4></div>';
                 echo '</div>';
                 
                 
@@ -70,7 +97,7 @@ $user=$_SESSION['current_user'];
                
 
                 echo "<a class=\"btn btn-primary\" href=\"update.php?id={$row['id']}\" role=\"button\">Update</a> ";
-                echo "<a class=\"btn btn-danger\" href=\"../controller/deleteCustomerAdmin.php?id={$row['id']}\" role=\"button\">Delete</a>";
+                echo "<a class=\"btn btn-danger\" href=\"../controller/deletePost.php?id={$row['id']}\" role=\"button\">Delete</a>";
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
