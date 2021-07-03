@@ -26,3 +26,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 </head>
 <body style="width: 1920;height: 1080;color: var(--bs-blue);">
+
+<nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="index.php">X Titan E-COMMERCE</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">

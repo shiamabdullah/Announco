@@ -12,4 +12,20 @@
     
     }
 
+    function insertPost($post)
+    { 
+      $conn=getConnection();
+      $sql="INSERT INTO `announcement`(`header`, `body`) VALUES ('{$post['header']}', '{$post['body']}')";
+      $result=mysqli_query($conn,$sql);
+      if($result)
+      {   
+        echo 'Added';
+      }
+      else
+      {
+          return false;
+      }
+    }
+  
+
   ?>
