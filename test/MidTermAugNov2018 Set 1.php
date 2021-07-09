@@ -7,21 +7,19 @@
 Now I wonder what will be displayed throughout this php file.</br> 
 </p>
 <?php
-require 'MidTermAugNov2018 Set 1 To Include III.php';
-require 'MidTermAugNov2018 Set 1 To Include I.php';
+require 'MidTermAugNov2018 Set 1 Include III.php';
+require 'MidTermAugNov2018 Set 1 Include I.php';
 staticFun();
-require 'MidTermAugNov2018 Set 1 To Include II.php';
+require 'MidTermAugNov2018 Set 1 Include II.php';
 printAText();
 echo "<p>$text</p>";
-global $print;
 echo "<p>$print</p>";
 displayoutput1();
 staticFun();
 whileLoop();
-echo "<p> I have $variable1 $variable2 $variable3 </p>";
+echo "<p> I have $variable1 $variable2 $variable3
 staticFun();
 echo "End of Codes";
 ?>
 </body>
 </html>
-

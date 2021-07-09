@@ -2,7 +2,7 @@
 $string = "This is string variable";
 $text = "This is a text variable";
 $character = "This is a character variable";
-$variable1 = "6 ";
-$variable2 = "modules ";
-$variable3 = "this semester";
+$var1 = "6 ";
+$var2 = "modules ";
+$var3 = "this semester";
 ?>
